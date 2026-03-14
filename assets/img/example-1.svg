@@ -1,0 +1,10 @@
+<svg width="960" height="600" viewBox="0 0 960 600" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="960" height="600" rx="28" fill="#F4F7FC"/>
+  <rect x="70" y="70" width="820" height="460" rx="24" fill="#EAF0FF" stroke="#CBD8F1" stroke-width="3"/>
+  <rect x="120" y="130" width="220" height="160" rx="18" fill="#D6E4FF"/>
+  <rect x="385" y="180" width="180" height="200" rx="20" fill="#E6FFF3"/>
+  <rect x="620" y="120" width="170" height="260" rx="20" fill="#FBE7D0"/>
+  <rect x="118" y="410" width="672" height="24" rx="12" fill="#DCE6F8"/>
+  <text x="120" y="478" fill="#31415F" font-family="Inter, Arial, sans-serif" font-size="34" font-weight="800">Placeholder Example 1</text>
+  <text x="120" y="520" fill="#5D6B82" font-family="Inter, Arial, sans-serif" font-size="24" font-weight="600">Replace with your detection / segmentation / tracking visualization.</text>
+</svg>

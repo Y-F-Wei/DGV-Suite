@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="中英双语科研数据集网站模板，适用于计算机视觉、农业智能、动物行为分析等数据集发布。" />
+  <title>GoatMVT Dataset | 双语数据集网站模板</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+SC:wght@400;500;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a href="#home" class="brand">
+        <span class="brand-badge">DS</span>
+        <span class="brand-text">GoatMVT Dataset</span>
+      </a>
+
+      <nav class="nav" aria-label="Primary">
+        <a href="#overview" data-i18n="nav_overview">概览</a>
+        <a href="#abstract" data-i18n="nav_abstract">摘要</a>
+        <a href="#dataset" data-i18n="nav_dataset">数据集</a>
+        <a href="#examples" data-i18n="nav_examples">样例</a>
+        <a href="#benchmark" data-i18n="nav_benchmark">基准</a>
+        <a href="#download" data-i18n="nav_download">下载</a>
+        <a href="#citation" data-i18n="nav_citation">引用</a>
+      </nav>
+
+      <div class="nav-actions">
+        <button id="langToggle" class="lang-toggle" aria-label="切换语言">EN</button>
+        <button id="menuToggle" class="menu-toggle" aria-label="Open Menu">☰</button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section id="home" class="hero section">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow" data-i18n="hero_badge">科研数据集官网模板 · GitHub Pages Ready</p>
+          <h1 data-i18n="hero_title">GoatMVT: 面向智能养殖的多视觉任务奶山羊数据集</h1>
+          <p class="hero-subtitle" data-i18n="hero_subtitle">
+            一个可直接部署到 GitHub Pages 的中英双语数据集网站模板，适用于目标检测、跟踪、重识别、行为识别与疾病诊断等科研任务展示。
+          </p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#download" data-i18n="btn_dataset">下载数据集</a>
+            <a class="btn btn-secondary" href="#benchmark" data-i18n="btn_benchmark">查看基准结果</a>
+            <a class="btn btn-ghost" href="#citation" data-i18n="btn_paper">论文与引用</a>
+          </div>
+          <ul class="hero-meta">
+            <li><strong data-i18n="meta_authors_label">作者</strong> <span data-i18n="meta_authors">Your Team, University / Lab</span></li>
+            <li><strong data-i18n="meta_venue_label">状态</strong> <span data-i18n="meta_venue">Dataset / Project Page / Benchmark</span></li>
+            <li><strong data-i18n="meta_links_label">链接</strong> <a href="#download">GitHub</a> · <a href="#download">Paper</a> · <a href="#download">Demo</a></li>
+          </ul>
+        </div>
+        <div class="hero-visual card-glow">
+          <img src="assets/img/hero-cover.svg" alt="Dataset preview" />
+        </div>
+      </div>
+    </section>
+
+    <section id="overview" class="section muted-bg">
+      <div class="container">
+        <div class="section-head">
+          <h2 data-i18n="overview_title">数据集概览</h2>
+          <p data-i18n="overview_desc">用卡片快速展示你的数据规模、任务类型和采集设置。</p>
+        </div>
+        <div class="stats-grid">
+          <article class="stat-card">
+            <span class="stat-value">32,007</span>
+            <span class="stat-label" data-i18n="stat_images">图像数量</span>
+          </article>
+          <article class="stat-card">
+            <span class="stat-value">1,459</span>
+            <span class="stat-label" data-i18n="stat_videos">视频数量</span>
+          </article>
+          <article class="stat-card">
+            <span class="stat-value">6</span>
+            <span class="stat-label" data-i18n="stat_tasks">视觉任务</span>
+          </article>
+          <article class="stat-card">
+            <span class="stat-value">12</span>
+            <span class="stat-label" data-i18n="stat_scenes">采集场景</span>
+          </article>
+          <article class="stat-card">
+            <span class="stat-value">24/7</span>
+            <span class="stat-label" data-i18n="stat_monitoring">长时段监测</span>
+          </article>
+          <article class="stat-card">
+            <span class="stat-value">ID-level</span>
+            <span class="stat-label" data-i18n="stat_identity">个体级标注</span>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="abstract" class="section">
+      <div class="container two-col">
+        <div>
+          <div class="section-head left-align">
+            <h2 data-i18n="abstract_title">摘要</h2>
+          </div>
+          <p class="lead" data-i18n="abstract_p1">
+            智能养殖场景下，公开可用的奶山羊多任务视觉数据集仍然稀缺。为支持检测、分割、跟踪、重识别、行为识别与羊病智能诊断等任务，我们构建了一个具有统一组织结构和跨任务评测接口的数据集模板展示站点。
+          </p>
+          <p data-i18n="abstract_p2">
+            该模板强调三类核心信息：数据采集与标注规范、代表性视觉样例、以及标准化 benchmark 展示方式。你可以直接替换文本、链接、图片和表格，将其作为论文配套项目页、数据集官网或实验平台展示页。
+          </p>
+        </div>
+        <aside class="feature-panel">
+          <h3 data-i18n="highlights_title">亮点</h3>
+          <ul class="feature-list">
+            <li data-i18n="highlight_1">中英双语一键切换，适合期刊论文和国际会议配套展示。</li>
+            <li data-i18n="highlight_2">模块覆盖数据集官网常见内容：摘要、样例、下载、基准、引用。</li>
+            <li data-i18n="highlight_3">纯静态实现，无需后端，可直接部署到 GitHub Pages。</li>
+            <li data-i18n="highlight_4">便于替换为奶山羊、牛、猪、禽类等农业视觉数据集页面。</li>
+          </ul>
+        </aside>
+      </div>
+    </section>
+
+    <section id="dataset" class="section muted-bg">
+      <div class="container">
+        <div class="section-head">
+          <h2 data-i18n="dataset_title">数据集描述</h2>
+          <p data-i18n="dataset_desc">建议把采集设置、任务定义、标注结构和数据划分写清楚，方便审稿人与使用者理解。</p>
+        </div>
+
+        <div class="info-grid">
+          <article class="info-card">
+            <h3 data-i18n="card_collection_title">采集设置</h3>
+            <p data-i18n="card_collection_body">固定顶置与侧视摄像头，覆盖多栏舍、多时间段、多光照条件，支持连续视频采集与多场景分析。</p>
+          </article>
+          <article class="info-card">
+            <h3 data-i18n="card_tasks_title">任务覆盖</h3>
+            <p data-i18n="card_tasks_body">目标检测、实例分割、多目标跟踪、个体重识别、行为识别、疾病诊断等任务可统一展示。</p>
+          </article>
+          <article class="info-card">
+            <h3 data-i18n="card_annotations_title">标注结构</h3>
+            <p data-i18n="card_annotations_body">推荐展示 JSON 或 COCO/MOT 风格标注组织方式，并补充类别定义、ID 规则和质量控制流程。</p>
+          </article>
+          <article class="info-card">
+            <h3 data-i18n="card_split_title">数据划分</h3>
+            <p data-i18n="card_split_body">建议提供 train / val / test 划分原则，以及跨场景、跨个体或跨时段评测设置说明。</p>
+          </article>
+        </div>
+
+        <div class="code-block-wrap">
+          <div class="code-title" data-i18n="structure_title">示例：统一数据组织结构</div>
+<pre><code>dataset/
+├── images/
+│   ├── train/
+│   ├── val/
+│   └── test/
+├── videos/
+├── annotations/
+│   ├── detection.json
+│   ├── tracking.json
+│   ├── reid_meta.csv
+│   └── behavior_labels.json
+├── splits/
+│   ├── train.txt
+│   ├── val.txt
+│   └── test.txt
+└── docs/
+    ├── label_definition.pdf
+    └── license.txt</code></pre>
+        </div>
+      </div>
+    </section>
+
+    <section id="examples" class="section">
+      <div class="container">
+        <div class="section-head">
+          <h2 data-i18n="examples_title">可视化样例</h2>
+          <p data-i18n="examples_desc">这里适合放原始图像、检测框、分割 mask、跟踪轨迹、行为类别和病害样例。</p>
+        </div>
+        <div class="gallery-grid">
+          <figure class="gallery-card">
+            <img src="assets/img/example-1.svg" alt="example 1" />
+            <figcaption data-i18n="example_1">检测样例</figcaption>
+          </figure>
+          <figure class="gallery-card">
+            <img src="assets/img/example-2.svg" alt="example 2" />
+            <figcaption data-i18n="example_2">分割样例</figcaption>
+          </figure>
+          <figure class="gallery-card">
+            <img src="assets/img/example-3.svg" alt="example 3" />
+            <figcaption data-i18n="example_3">跟踪样例</figcaption>
+          </figure>
+          <figure class="gallery-card">
+            <img src="assets/img/example-4.svg" alt="example 4" />
+            <figcaption data-i18n="example_4">重识别样例</figcaption>
+          </figure>
+          <figure class="gallery-card">
+            <img src="assets/img/example-5.svg" alt="example 5" />
+            <figcaption data-i18n="example_5">行为识别样例</figcaption>
+          </figure>
+          <figure class="gallery-card">
+            <img src="assets/img/example-6.svg" alt="example 6" />
+            <figcaption data-i18n="example_6">疾病诊断样例</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section id="benchmark" class="section muted-bg">
+      <div class="container">
+        <div class="section-head">
+          <h2 data-i18n="benchmark_title">基准结果</h2>
+          <p data-i18n="benchmark_desc">建议展示多个任务的 baseline，并保持指标和划分协议一致。</p>
+        </div>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th data-i18n="table_method">方法</th>
+                <th>Task</th>
+                <th>Metric</th>
+                <th>Score</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>YOLO-Base</td>
+                <td data-i18n="task_detection">Detection</td>
+                <td>mAP50</td>
+                <td>88.4</td>
+              </tr>
+              <tr>
+                <td>Mask-Base</td>
+                <td data-i18n="task_segmentation">Segmentation</td>
+                <td>mIoU</td>
+                <td>76.2</td>
+              </tr>
+              <tr>
+                <td>DeepSORT-Base</td>
+                <td data-i18n="task_tracking">Tracking</td>
+                <td>IDF1</td>
+                <td>81.9</td>
+              </tr>
+              <tr>
+                <td>ReIDNet</td>
+                <td data-i18n="task_reid">ReID</td>
+                <td>Rank-1</td>
+                <td>90.5</td>
+              </tr>
+              <tr>
+                <td>SlowFast-Base</td>
+                <td data-i18n="task_behavior">Behavior</td>
+                <td>F1</td>
+                <td>84.7</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <section id="download" class="section">
+      <div class="container">
+        <div class="section-head">
+          <h2 data-i18n="download_title">下载与资源</h2>
+          <p data-i18n="download_desc">把论文、代码、数据、补充材料和许可证入口集中放在这里。</p>
+        </div>
+
+        <div class="resource-grid">
+          <a class="resource-card" href="https://github.com/" target="_blank" rel="noopener noreferrer">
+            <h3 data-i18n="res_code_title">代码仓库</h3>
+            <p data-i18n="res_code_desc">将此链接替换为 GitHub / Gitee / Hugging Face 项目主页。</p>
+          </a>
+          <a class="resource-card" href="https://arxiv.org/" target="_blank" rel="noopener noreferrer">
+            <h3 data-i18n="res_paper_title">论文链接</h3>
+            <p data-i18n="res_paper_desc">可填写 arXiv、期刊官网、会议主页或 DOI 链接。</p>
+          </a>
+          <a class="resource-card" href="https://huggingface.co/datasets" target="_blank" rel="noopener noreferrer">
+            <h3 data-i18n="res_dataset_title">数据下载</h3>
+            <p data-i18n="res_dataset_desc">可指向 Hugging Face、学校服务器、网盘或 GitHub Release。</p>
+          </a>
+          <a class="resource-card" href="#citation">
+            <h3 data-i18n="res_cite_title">BibTeX 引用</h3>
+            <p data-i18n="res_cite_desc">建议提供一键复制引用，方便论文使用者标准化引用。</p>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section id="citation" class="section muted-bg">
+      <div class="container two-col">
+        <div>
+          <div class="section-head left-align">
+            <h2 data-i18n="citation_title">引用</h2>
+          </div>
+          <div class="code-block-wrap">
+            <div class="code-title">BibTeX</div>
+<pre><code id="bibtex">@article{yourdataset2026,
+  title   = {GoatMVT: A Multi-Task Vision Dataset for Intelligent Dairy Goat Farming},
+  author  = {Your Name and Coauthors},
+  journal = {Your Target Venue},
+  year    = {2026}
+}</code></pre>
+          </div>
+          <button id="copyBibtex" class="btn btn-secondary" data-i18n="btn_copy">复制 BibTeX</button>
+          <span id="copyStatus" class="copy-status"></span>
+        </div>
+        <aside class="contact-panel">
+          <h3 data-i18n="contact_title">联系与许可</h3>
+          <p data-i18n="contact_body">建议在这里说明数据使用协议、非商业用途限制、隐私与伦理声明，以及联系邮箱。</p>
+          <ul>
+            <li>Email: yourname@university.edu</li>
+            <li>License: CC BY-NC 4.0 / Custom Academic License</li>
+            <li data-i18n="contact_note">请根据你的实际论文状态、基金信息和机构要求修改本页。</li>
+          </ul>
+        </aside>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-wrap">
+      <p>© 2026 GoatMVT Dataset Template</p>
+      <p data-i18n="footer_note">Built for academic datasets, benchmarks, and project pages.</p>
+    </div>
+  </footer>
+
+  <script src="assets/js/script.js"></script>
+</body>
+</html>
