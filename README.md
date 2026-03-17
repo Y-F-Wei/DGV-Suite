@@ -1,13 +1,25 @@
-# Bilingual Dataset Website Template for GitHub Pages
+# DGV-Suite Website (Updated from the Uploaded Paper)
 
-这是一个可直接部署到 **GitHub Pages** 的中英双语科研数据集网站模板，适合：
+这个版本已经按你上传的论文《DGV-Suite: A Benchmark Suite of Task-Specific Subsets for Dairy Goat Vision》完成了一次针对性改写，适合直接部署到 **GitHub Pages**。
 
-- 计算机视觉数据集官网
-- 农业智能 / 智慧养殖项目页
-- 论文配套 project page
-- benchmark / 数据下载展示页
+## 已完成的修改
 
-## 文件结构
+- 将模板标题替换为 **DGV-Suite**
+- 根据论文摘要更新了首页简介与亮点
+- 根据论文统计更新了概览卡片：
+  - 32,007 images
+  - 1,459 videos
+  - 8 task subsets
+  - 159 goat IDs
+  - 17 keypoints
+  - 7 behavior classes
+- 根据论文的数据采集与标注协议重写了 Dataset 部分
+- 根据论文 Table 2 重写了 **6 个监督任务** 的 benchmark 表格
+- 将你上传的 `DGV.pdf` 内置为网站中的可打开 PDF
+- 从论文页面中裁剪了 6 张图，作为项目页展示图示
+- 保留了 **中英双语切换**
+
+## 目录结构
 
 ```text
 .
@@ -19,119 +31,66 @@
     │   └── style.css
     ├── js/
     │   └── script.js
-    └── img/
-        ├── hero-cover.svg
-        ├── example-1.svg
-        ├── example-2.svg
-        ├── example-3.svg
-        ├── example-4.svg
-        ├── example-5.svg
-        └── example-6.svg
+    ├── img/
+    │   ├── hero-cover.svg
+    │   ├── example-1.png
+    │   ├── example-2.png
+    │   ├── example-3.png
+    │   ├── example-4.png
+    │   ├── example-5.png
+    │   └── example-6.png
+    └── paper/
+        └── DGV-Suite.pdf
 ```
 
-## 快速部署到 GitHub Pages
+## 部署到 GitHub Pages
 
-### 方法 1：直接新建仓库部署
-
-1. 在 GitHub 新建一个仓库，例如：`goatmvt-site`
-2. 将本模板全部文件上传到仓库根目录
-3. 进入仓库 `Settings` → `Pages`
-4. 在 `Build and deployment` 中选择：
+1. 把本目录全部文件上传到仓库根目录
+2. 打开仓库 `Settings → Pages`
+3. 选择：
    - Source: `Deploy from a branch`
-   - Branch: `main` / `(root)`
-5. 保存后等待几十秒至几分钟
-6. 页面地址通常为：
+   - Branch: `main`
+   - Folder: `/ (root)`
+4. 保存后等待几分钟
+5. 站点地址通常为：
 
 ```text
-https://你的用户名.github.io/goatmvt-site/
+https://你的用户名.github.io/仓库名/
 ```
 
-### 方法 2：作为个人主页仓库部署
+## 建议你接下来继续修改的地方
 
-如果仓库名为：
+### 1. 作者信息
+当前沿用了论文匿名投稿版本中的：
 
-```text
-你的用户名.github.io
-```
+- `Anonymous Author(s)`
+- `Submission Id: 123-A56-BU3`
 
-则网站会部署到根域名：
+如果你要公开发布，建议在：
+- `index.html`
+- `assets/js/script.js`
 
-```text
-https://你的用户名.github.io/
-```
+中替换为真实作者和单位。
 
-## 你需要优先替换的内容
+### 2. 资源链接
+当前资源区已经接入：
+- 论文 PDF
+- 项目页 URL
+- benchmark 区块
+- BibTeX
 
-### 1. 网站标题与摘要
-修改 `index.html` 中这些内容：
-- 数据集名称
-- 副标题
-- 作者与单位
-- 摘要文字
+如果后续你有：
+- 数据下载地址
+- 代码仓库
+- 补充材料
+- 视频 demo
 
-### 2. 下载链接
-在 `index.html` 中找到资源卡片，将以下链接替换为你的真实地址：
-- GitHub / Gitee 代码链接
-- 论文链接
-- 数据下载链接
-- Demo 视频链接（如有）
+建议继续加入资源卡片。
 
-### 3. 图片样例
-当前 `assets/img/` 中是占位 SVG 图。
-你可以替换为：
-- 原始图像样例
-- 检测框结果图
-- 分割 mask 图
-- 跟踪可视化图
-- 行为识别图
-- 病害诊断图
-
-建议保持文件名不变，这样不需要再改 HTML。
-
-### 4. Benchmark 表格
-在 `index.html` 中的 benchmark 表替换为你的真实结果，例如：
-- mAP50 / mAP50-95
-- mIoU
-- HOTA / MOTA / IDF1
-- Rank-1 / mAP
-- Accuracy / F1
-
-### 5. BibTeX
-在 `index.html` 中替换 `@article{...}` 内容。
-
-## 双语切换说明
-
-- 语言切换逻辑在：`assets/js/script.js`
-- 所有使用 `data-i18n` 的元素都可以自动中英切换
-- 默认语言为中文，可在脚本中修改为英文
-
-## 推荐你继续扩展的模块
-
-你可以继续增加：
-
-- News / 更新日志
-- Leaderboard
-- FAQ
-- 数据协议下载页
-- 视频演示嵌入（YouTube / Bilibili）
-- 数据标注格式图
-- 方法流程图
-
-## 针对你的奶山羊数据集，建议替换为以下栏目
-
-- Dataset Overview
-- Data Collection Setup
-- Multi-task Annotation Protocol
-- Example Visualizations
-- Benchmark Results
-- Download & License
-- Citation & Contact
+### 3. 引用信息
+当前 BibTeX 使用的是匿名投稿格式。正式发布前应替换为最终版本。
 
 ## 本地预览
-
-直接双击 `index.html` 即可浏览。
-
-如果你想更稳定地本地预览，也可以在该目录下运行：
 
 ```bash
 python -m http.server 8000
@@ -142,12 +101,4 @@ python -m http.server 8000
 ```text
 http://localhost:8000
 ```
-
-## 备注
-
-本模板为纯静态页面：
-- 无后端
-- 无数据库
-- 可直接托管于 GitHub Pages
-- 后续也可迁移到 Vercel / Netlify
 

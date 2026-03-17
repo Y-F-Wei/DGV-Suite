@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="中英双语科研数据集网站模板，适用于计算机视觉、农业智能、动物行为分析等数据集发布。" />
-  <title>GoatMVT Dataset | 双语数据集网站模板</title>
+  <meta name="description" content="DGV-Suite: A benchmark suite of task-specific subsets for dairy goat vision." />
+  <title>DGV-Suite | Dairy Goat Vision Benchmark</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+SC:wght@400;500;700;800&display=swap" rel="stylesheet">
@@ -15,16 +15,16 @@
     <div class="container nav-wrap">
       <a href="#home" class="brand">
         <span class="brand-badge">DS</span>
-        <span class="brand-text">GoatMVT Dataset</span>
+        <span class="brand-text">DGV-Suite</span>
       </a>
 
       <nav class="nav" aria-label="Primary">
         <a href="#overview" data-i18n="nav_overview">概览</a>
         <a href="#abstract" data-i18n="nav_abstract">摘要</a>
         <a href="#dataset" data-i18n="nav_dataset">数据集</a>
-        <a href="#examples" data-i18n="nav_examples">样例</a>
+        <a href="#examples" data-i18n="nav_examples">图示</a>
         <a href="#benchmark" data-i18n="nav_benchmark">基准</a>
-        <a href="#download" data-i18n="nav_download">下载</a>
+        <a href="#download" data-i18n="nav_download">资源</a>
         <a href="#citation" data-i18n="nav_citation">引用</a>
       </nav>
 
@@ -39,24 +39,35 @@
     <section id="home" class="hero section">
       <div class="container hero-grid">
         <div class="hero-copy">
-          <p class="eyebrow" data-i18n="hero_badge">科研数据集官网模板 · GitHub Pages Ready</p>
-          <h1 data-i18n="hero_title">GoatMVT: 面向智能养殖的多视觉任务奶山羊数据集</h1>
+          <p class="eyebrow" data-i18n="hero_badge">奶山羊视觉基准 · GitHub Pages Ready</p>
+          <h1 data-i18n="hero_title">DGV-Suite：面向奶山羊视觉理解的任务特定子集基准套件</h1>
           <p class="hero-subtitle" data-i18n="hero_subtitle">
-            一个可直接部署到 GitHub Pages 的中英双语数据集网站模板，适用于目标检测、跟踪、重识别、行为识别与疾病诊断等科研任务展示。
+            DGV-Suite 是一个面向奶山羊视觉理解的大规模基准套件，包含 32,007 张图像和 1,459 段视频，在真实牧场环境下支持 8 类代表性任务。
           </p>
           <div class="hero-actions">
-            <a class="btn btn-primary" href="#download" data-i18n="btn_dataset">下载数据集</a>
-            <a class="btn btn-secondary" href="#benchmark" data-i18n="btn_benchmark">查看基准结果</a>
-            <a class="btn btn-ghost" href="#citation" data-i18n="btn_paper">论文与引用</a>
+            <a class="btn btn-primary" href="https://y-f-wei.github.io/DGV-Suite/" target="_blank" rel="noopener noreferrer" data-i18n="btn_project">项目主页</a>
+            <a class="btn btn-secondary" href="#benchmark" data-i18n="btn_benchmark">查看基准</a>
+            <a class="btn btn-ghost" href="assets/paper/DGV-Suite.pdf" target="_blank" rel="noopener noreferrer" data-i18n="btn_paper">论文 PDF</a>
+          </div>
+          <div class="hero-highlights">
+            <span class="chip" data-i18n="chip_1">8 个任务子集</span>
+            <span class="chip" data-i18n="chip_2">159 个体</span>
+            <span class="chip" data-i18n="chip_3">17 个关键点</span>
+            <span class="chip" data-i18n="chip_4">7 类行为</span>
           </div>
           <ul class="hero-meta">
-            <li><strong data-i18n="meta_authors_label">作者</strong> <span data-i18n="meta_authors">Your Team, University / Lab</span></li>
-            <li><strong data-i18n="meta_venue_label">状态</strong> <span data-i18n="meta_venue">Dataset / Project Page / Benchmark</span></li>
-            <li><strong data-i18n="meta_links_label">链接</strong> <a href="#download">GitHub</a> · <a href="#download">Paper</a> · <a href="#download">Demo</a></li>
+            <li><strong data-i18n="meta_authors_label">作者</strong> <span data-i18n="meta_authors">Anonymous Author(s)</span></li>
+            <li><strong data-i18n="meta_status_label">投稿信息</strong> <span data-i18n="meta_status">Submission Id: 123-A56-BU3</span></li>
+            <li>
+              <strong data-i18n="meta_links_label">链接</strong>
+              <a href="https://y-f-wei.github.io/DGV-Suite/" target="_blank" rel="noopener noreferrer" data-i18n="link_project">Project Page</a> ·
+              <a href="assets/paper/DGV-Suite.pdf" target="_blank" rel="noopener noreferrer" data-i18n="link_pdf">PDF</a> ·
+              <a href="#benchmark" data-i18n="link_benchmark">Benchmark</a>
+            </li>
           </ul>
         </div>
         <div class="hero-visual card-glow">
-          <img src="assets/img/hero-cover.svg" alt="Dataset preview" />
+          <img src="assets/img/hero-cover.svg" alt="DGV-Suite overview" />
         </div>
       </div>
     </section>
@@ -65,7 +76,7 @@
       <div class="container">
         <div class="section-head">
           <h2 data-i18n="overview_title">数据集概览</h2>
-          <p data-i18n="overview_desc">用卡片快速展示你的数据规模、任务类型和采集设置。</p>
+          <p data-i18n="overview_desc">DGV-Suite 以任务特定子集形式组织，在统一基准框架下覆盖奶山羊视觉理解中的核心任务。</p>
         </div>
         <div class="stats-grid">
           <article class="stat-card">
@@ -77,20 +88,20 @@
             <span class="stat-label" data-i18n="stat_videos">视频数量</span>
           </article>
           <article class="stat-card">
-            <span class="stat-value">6</span>
-            <span class="stat-label" data-i18n="stat_tasks">视觉任务</span>
+            <span class="stat-value">8</span>
+            <span class="stat-label" data-i18n="stat_tasks">任务子集</span>
           </article>
           <article class="stat-card">
-            <span class="stat-value">12</span>
-            <span class="stat-label" data-i18n="stat_scenes">采集场景</span>
+            <span class="stat-value">159</span>
+            <span class="stat-label" data-i18n="stat_ids">奶山羊个体</span>
           </article>
           <article class="stat-card">
-            <span class="stat-value">24/7</span>
-            <span class="stat-label" data-i18n="stat_monitoring">长时段监测</span>
+            <span class="stat-value">17</span>
+            <span class="stat-label" data-i18n="stat_keypoints">解剖关键点</span>
           </article>
           <article class="stat-card">
-            <span class="stat-value">ID-level</span>
-            <span class="stat-label" data-i18n="stat_identity">个体级标注</span>
+            <span class="stat-value">7</span>
+            <span class="stat-label" data-i18n="stat_behaviors">行为类别</span>
           </article>
         </div>
       </div>
@@ -103,19 +114,19 @@
             <h2 data-i18n="abstract_title">摘要</h2>
           </div>
           <p class="lead" data-i18n="abstract_p1">
-            智能养殖场景下，公开可用的奶山羊多任务视觉数据集仍然稀缺。为支持检测、分割、跟踪、重识别、行为识别与羊病智能诊断等任务，我们构建了一个具有统一组织结构和跨任务评测接口的数据集模板展示站点。
+            DGV-Suite 针对现有奶山羊数据集规模小、任务孤立、采集条件受限等问题，构建了一个面向真实牧场环境的大规模视觉基准套件。数据集包含 32,007 张图像和 1,459 段视频，覆盖光照变化、遮挡、个体交互等复杂条件。
           </p>
           <p data-i18n="abstract_p2">
-            该模板强调三类核心信息：数据采集与标注规范、代表性视觉样例、以及标准化 benchmark 展示方式。你可以直接替换文本、链接、图片和表格，将其作为论文配套项目页、数据集官网或实验平台展示页。
+            该基准支持目标检测、实例分割、语义分割、目标跟踪、姿态估计、行为识别、个体识别和图像生成 8 类任务，并报告了 6 个监督任务上的代表性 baseline，验证了其挑战性与应用价值。
           </p>
         </div>
         <aside class="feature-panel">
-          <h3 data-i18n="highlights_title">亮点</h3>
+          <h3 data-i18n="highlights_title">论文亮点</h3>
           <ul class="feature-list">
-            <li data-i18n="highlight_1">中英双语一键切换，适合期刊论文和国际会议配套展示。</li>
-            <li data-i18n="highlight_2">模块覆盖数据集官网常见内容：摘要、样例、下载、基准、引用。</li>
-            <li data-i18n="highlight_3">纯静态实现，无需后端，可直接部署到 GitHub Pages。</li>
-            <li data-i18n="highlight_4">便于替换为奶山羊、牛、猪、禽类等农业视觉数据集页面。</li>
+            <li data-i18n="highlight_1">首次以统一 benchmark 形式系统覆盖奶山羊视觉理解中的 8 类代表性任务。</li>
+            <li data-i18n="highlight_2">采用任务特定子集而非完全样本级对齐的多任务构造方式，更贴合真实数据采集与标注流程。</li>
+            <li data-i18n="highlight_3">数据采自真实室内外牧场场景，包含密集布局、遮挡、相似个体与复杂背景。</li>
+            <li data-i18n="highlight_4">提供 6 个监督任务的 benchmark protocol 与代表性模型结果，支持后续公平比较。</li>
           </ul>
         </aside>
       </div>
@@ -124,49 +135,40 @@
     <section id="dataset" class="section muted-bg">
       <div class="container">
         <div class="section-head">
-          <h2 data-i18n="dataset_title">数据集描述</h2>
-          <p data-i18n="dataset_desc">建议把采集设置、任务定义、标注结构和数据划分写清楚，方便审稿人与使用者理解。</p>
+          <h2 data-i18n="dataset_title">数据集与标注协议</h2>
+          <p data-i18n="dataset_desc">页面内容依据论文中的数据采集、标注流程、子集统计与 benchmark protocol 进行整理。</p>
         </div>
 
         <div class="info-grid">
           <article class="info-card">
-            <h3 data-i18n="card_collection_title">采集设置</h3>
-            <p data-i18n="card_collection_body">固定顶置与侧视摄像头，覆盖多栏舍、多时间段、多光照条件，支持连续视频采集与多场景分析。</p>
+            <h3 data-i18n="card_collection_title">采集环境</h3>
+            <p data-i18n="card_collection_body">数据采自中国西北地区大型奶山羊科研教学牧场，包含半开放式室内羊舍与室外活动区。场内饲养 159 只泌乳期萨能奶山羊，并有 10 只黑山羊在相同管理条件下生活。</p>
           </article>
           <article class="info-card">
-            <h3 data-i18n="card_tasks_title">任务覆盖</h3>
-            <p data-i18n="card_tasks_body">目标检测、实例分割、多目标跟踪、个体重识别、行为识别、疾病诊断等任务可统一展示。</p>
+            <h3 data-i18n="card_devices_title">采集设备</h3>
+            <p data-i18n="card_devices_body">室内外部署多摄像头系统，包括 YW7100HR-SC9 红外网络摄像头和 DS-IPC-B12-I/POE 摄像头；视频为 1080p、25 fps，并辅以 Canon EOS 60D 采集的高分辨率静态图像。</p>
           </article>
           <article class="info-card">
-            <h3 data-i18n="card_annotations_title">标注结构</h3>
-            <p data-i18n="card_annotations_body">推荐展示 JSON 或 COCO/MOT 风格标注组织方式，并补充类别定义、ID 规则和质量控制流程。</p>
+            <h3 data-i18n="card_annotations_title">标注协议</h3>
+            <p data-i18n="card_annotations_body">检测采用 LabelImg/PASCAL VOC，实例分割采用 LabelMe/COCO，语义分割采用 EasyData，跟踪采用 ImageLabel/VOT；姿态估计使用 17 个关键点，行为识别包含 7 类行为，个体识别按身份文件夹组织。</p>
           </article>
           <article class="info-card">
-            <h3 data-i18n="card_split_title">数据划分</h3>
-            <p data-i18n="card_split_body">建议提供 train / val / test 划分原则，以及跨场景、跨个体或跨时段评测设置说明。</p>
+            <h3 data-i18n="card_protocol_title">评测协议</h3>
+            <p data-i18n="card_protocol_body">6 个监督任务统一采用 7:1:2 的 train/val/test 划分。检测、实例分割和姿态估计使用 AP/AP50/AP75；语义分割使用 mIoU/mDice/mPA；行为识别使用 mAP/mAcc/F1；跟踪使用 EAO/Success/Speed。</p>
           </article>
         </div>
 
         <div class="code-block-wrap">
-          <div class="code-title" data-i18n="structure_title">示例：统一数据组织结构</div>
-<pre><code>dataset/
-├── images/
-│   ├── train/
-│   ├── val/
-│   └── test/
-├── videos/
-├── annotations/
-│   ├── detection.json
-│   ├── tracking.json
-│   ├── reid_meta.csv
-│   └── behavior_labels.json
-├── splits/
-│   ├── train.txt
-│   ├── val.txt
-│   └── test.txt
-└── docs/
-    ├── label_definition.pdf
-    └── license.txt</code></pre>
+          <div class="code-title" data-i18n="structure_title">DGV-Suite 子集结构（依据论文统计）</div>
+<pre><code>DGV-Suite/
+├── detection/                # 3,430 images, 8,216 instances
+├── instance_segmentation/    # 3,100 images, 5,572 instances
+├── semantic_segmentation/    # 1,829 images, pixel-level masks
+├── tracking/                 # 65 head videos + 135 body videos
+├── pose_estimation/          # 5,268 images, 17 keypoints
+├── behavior_recognition/     # 1,259 videos, 7 classes
+├── identification/           # 15,380 images, 159 goats
+└── image_generation/         # 3,000 images</code></pre>
         </div>
       </div>
     </section>
@@ -174,33 +176,33 @@
     <section id="examples" class="section">
       <div class="container">
         <div class="section-head">
-          <h2 data-i18n="examples_title">可视化样例</h2>
-          <p data-i18n="examples_desc">这里适合放原始图像、检测框、分割 mask、跟踪轨迹、行为类别和病害样例。</p>
+          <h2 data-i18n="examples_title">论文图示与数据特征</h2>
+          <p data-i18n="examples_desc">以下图示基于论文中的关键可视化结果整理，适合作为项目页中的图像样例与统计摘要。</p>
         </div>
         <div class="gallery-grid">
           <figure class="gallery-card">
-            <img src="assets/img/example-1.svg" alt="example 1" />
-            <figcaption data-i18n="example_1">检测样例</figcaption>
+            <img src="assets/img/example-1.png" alt="Global livestock stock dynamics" />
+            <figcaption data-i18n="example_1">Figure 1：全球牛、羊、猪、山羊存栏变化趋势</figcaption>
           </figure>
           <figure class="gallery-card">
-            <img src="assets/img/example-2.svg" alt="example 2" />
-            <figcaption data-i18n="example_2">分割样例</figcaption>
+            <img src="assets/img/example-2.png" alt="Annotation examples" />
+            <figcaption data-i18n="example_2">Figure 2：分割、检测、多边形与关键点标注样例</figcaption>
           </figure>
           <figure class="gallery-card">
-            <img src="assets/img/example-3.svg" alt="example 3" />
-            <figcaption data-i18n="example_3">跟踪样例</figcaption>
+            <img src="assets/img/example-3.png" alt="Invisible keypoints distribution" />
+            <figcaption data-i18n="example_3">Figure 3：姿态估计关键点不可见比例统计</figcaption>
           </figure>
           <figure class="gallery-card">
-            <img src="assets/img/example-4.svg" alt="example 4" />
-            <figcaption data-i18n="example_4">重识别样例</figcaption>
+            <img src="assets/img/example-4.png" alt="Behavior recognition distribution" />
+            <figcaption data-i18n="example_4">Figure 4(a)：行为识别类别分布</figcaption>
           </figure>
           <figure class="gallery-card">
-            <img src="assets/img/example-5.svg" alt="example 5" />
-            <figcaption data-i18n="example_5">行为识别样例</figcaption>
+            <img src="assets/img/example-5.png" alt="Tracking subset statistics" />
+            <figcaption data-i18n="example_5">Figure 4(b)：跟踪子集头部/身体序列统计</figcaption>
           </figure>
           <figure class="gallery-card">
-            <img src="assets/img/example-6.svg" alt="example 6" />
-            <figcaption data-i18n="example_6">疾病诊断样例</figcaption>
+            <img src="assets/img/example-6.png" alt="Detection and segmentation statistics" />
+            <figcaption data-i18n="example_6">Figure 4(c-d)：实例数量与语义分割掩码比例分布</figcaption>
           </figure>
         </div>
       </div>
@@ -209,79 +211,190 @@
     <section id="benchmark" class="section muted-bg">
       <div class="container">
         <div class="section-head">
-          <h2 data-i18n="benchmark_title">基准结果</h2>
-          <p data-i18n="benchmark_desc">建议展示多个任务的 baseline，并保持指标和划分协议一致。</p>
+          <h2 data-i18n="benchmark_title">Benchmark Results</h2>
+          <p data-i18n="benchmark_desc">以下表格对应论文 Table 2，保留了六个监督任务上的代表性 baseline 与官方指标。</p>
         </div>
-        <div class="table-wrap">
-          <table>
-            <thead>
-              <tr>
-                <th data-i18n="table_method">方法</th>
-                <th>Task</th>
-                <th>Metric</th>
-                <th>Score</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>YOLO-Base</td>
-                <td data-i18n="task_detection">Detection</td>
-                <td>mAP50</td>
-                <td>88.4</td>
-              </tr>
-              <tr>
-                <td>Mask-Base</td>
-                <td data-i18n="task_segmentation">Segmentation</td>
-                <td>mIoU</td>
-                <td>76.2</td>
-              </tr>
-              <tr>
-                <td>DeepSORT-Base</td>
-                <td data-i18n="task_tracking">Tracking</td>
-                <td>IDF1</td>
-                <td>81.9</td>
-              </tr>
-              <tr>
-                <td>ReIDNet</td>
-                <td data-i18n="task_reid">ReID</td>
-                <td>Rank-1</td>
-                <td>90.5</td>
-              </tr>
-              <tr>
-                <td>SlowFast-Base</td>
-                <td data-i18n="task_behavior">Behavior</td>
-                <td>F1</td>
-                <td>84.7</td>
-              </tr>
-            </tbody>
-          </table>
+
+        <div class="info-grid benchmark-notes">
+          <article class="info-card">
+            <h3 data-i18n="note_protocol_title">官方 protocol</h3>
+            <p data-i18n="note_protocol_body">所有结果均在各任务测试集上报告，验证集用于模型选择与 early stopping。检测/分割/姿态使用 AP 系列指标，语义分割使用 mIoU、mDice、mPA，行为识别使用 mAP、mAcc、F1，跟踪使用 EAO、Success、Speed。</p>
+          </article>
+          <article class="info-card">
+            <h3 data-i18n="note_observation_title">结果观察</h3>
+            <p data-i18n="note_observation_body">YOLOv11 在目标检测上最佳，YOLOv12-Seg 在实例分割上最佳，DeepLabV3+ 在语义分割上表现最优，ELSlowFast-LSTM 在行为识别上取得最高 mAP，ODTrack 在跟踪上获得最高 EAO。</p>
+          </article>
         </div>
+
+        <div class="benchmark-stack">
+          <div class="benchmark-section">
+            <h3 data-i18n="task_detection_title">目标检测</h3>
+            <div class="table-wrap">
+              <table>
+                <thead>
+                  <tr>
+                    <th data-i18n="table_method">方法</th>
+                    <th data-i18n="table_backbone">骨干网络</th>
+                    <th>AP</th>
+                    <th>AP50</th>
+                    <th>AP75</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr><td>Faster R-CNN</td><td>r50</td><td>0.5555</td><td>0.9845</td><td>0.6819</td></tr>
+                  <tr><td>Cascade R-CNN</td><td>r50</td><td>0.5930</td><td>0.9765</td><td>0.6689</td></tr>
+                  <tr><td>FCOS</td><td>r50</td><td>0.5160</td><td>0.9430</td><td>0.5090</td></tr>
+                  <tr><td>YOLOv7</td><td>E-ELAN</td><td>0.5994</td><td>0.9878</td><td>0.7936</td></tr>
+                  <tr><td><strong>YOLOv11</strong></td><td>C2PSA</td><td><strong>0.6346</strong></td><td>0.9826</td><td><strong>0.8023</strong></td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <div class="benchmark-section">
+            <h3 data-i18n="task_insseg_title">实例分割</h3>
+            <div class="table-wrap">
+              <table>
+                <thead>
+                  <tr>
+                    <th data-i18n="table_method">方法</th>
+                    <th data-i18n="table_backbone">骨干网络</th>
+                    <th>AP</th>
+                    <th>AP50</th>
+                    <th>AP75</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr><td>Mask R-CNN</td><td>r50</td><td>0.7913</td><td>0.9775</td><td>0.9525</td></tr>
+                  <tr><td>YOLACT</td><td>r50</td><td>0.8107</td><td>0.9688</td><td>0.9288</td></tr>
+                  <tr><td>SOLOv2</td><td>r50</td><td>0.8707</td><td>0.9899</td><td>0.9792</td></tr>
+                  <tr><td>YOLOv8-Seg</td><td>CSPDarknet</td><td>0.6112</td><td>0.7991</td><td>0.6708</td></tr>
+                  <tr><td><strong>YOLOv12-Seg</strong></td><td>R-ELAN</td><td><strong>0.8930</strong></td><td><strong>0.9940</strong></td><td><strong>0.9884</strong></td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <div class="benchmark-section">
+            <h3 data-i18n="task_pose_title">姿态估计</h3>
+            <div class="table-wrap">
+              <table>
+                <thead>
+                  <tr>
+                    <th data-i18n="table_method">方法</th>
+                    <th data-i18n="table_backbone">骨干网络</th>
+                    <th>AP</th>
+                    <th>AP50</th>
+                    <th>AP75</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr><td>HRNet</td><td>w32</td><td>0.9139</td><td>0.9766</td><td>0.9454</td></tr>
+                  <tr><td>PVT v2</td><td>b2</td><td>0.9055</td><td>0.9750</td><td>0.9521</td></tr>
+                  <tr><td><strong>RTMPose</strong></td><td>CSPNeXt</td><td><strong>0.9145</strong></td><td>0.9764</td><td>0.9448</td></tr>
+                  <tr><td>GRMPose</td><td>CSPNeXt</td><td>0.9117</td><td>0.9765</td><td><strong>0.9550</strong></td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <div class="benchmark-section">
+            <h3 data-i18n="task_semseg_title">语义分割</h3>
+            <div class="table-wrap">
+              <table>
+                <thead>
+                  <tr>
+                    <th data-i18n="table_method">方法</th>
+                    <th data-i18n="table_backbone">骨干网络</th>
+                    <th>mIoU</th>
+                    <th>mDice</th>
+                    <th>mPA</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr><td>U-Net</td><td>r50</td><td>0.7462</td><td>0.7983</td><td>0.7262</td></tr>
+                  <tr><td><strong>DeepLabV3+</strong></td><td>r50</td><td><strong>0.7750</strong></td><td><strong>0.8692</strong></td><td><strong>0.8618</strong></td></tr>
+                  <tr><td>SegFormer</td><td>MiT</td><td>0.7698</td><td>0.8638</td><td>0.8597</td></tr>
+                  <tr><td>SegMAN</td><td>SegMAN Encoder</td><td>0.7670</td><td>0.8616</td><td>0.8578</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <div class="benchmark-section">
+            <h3 data-i18n="task_behavior_title">行为识别</h3>
+            <div class="table-wrap">
+              <table>
+                <thead>
+                  <tr>
+                    <th data-i18n="table_method">方法</th>
+                    <th data-i18n="table_backbone">骨干网络</th>
+                    <th>mAP</th>
+                    <th>mAcc</th>
+                    <th>F1</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr><td>I3D</td><td>r50</td><td>0.7690</td><td>0.7019</td><td>0.6890</td></tr>
+                  <tr><td>SlowFast</td><td>r50</td><td>0.7103</td><td>0.6935</td><td>0.6829</td></tr>
+                  <tr><td>TimeSformer</td><td>ViT</td><td>0.7710</td><td>0.7026</td><td>0.6890</td></tr>
+                  <tr><td>VideoMAE v2</td><td>ViT</td><td>0.8091</td><td><strong>0.7294</strong></td><td><strong>0.7256</strong></td></tr>
+                  <tr><td><strong>ELSlowFast-LSTM</strong></td><td>r50</td><td><strong>0.8195</strong></td><td>0.7195</td><td>0.7012</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <div class="benchmark-section">
+            <h3 data-i18n="task_tracking_title">目标跟踪</h3>
+            <div class="table-wrap">
+              <table>
+                <thead>
+                  <tr>
+                    <th data-i18n="table_method">方法</th>
+                    <th data-i18n="table_backbone">骨干网络</th>
+                    <th>EAO</th>
+                    <th>Success</th>
+                    <th data-i18n="table_speed">速度</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr><td>SiamRPN++</td><td>r50</td><td>0.2489</td><td>0.6401</td><td>33fps</td></tr>
+                  <tr><td>STARK</td><td>r50</td><td>0.2681</td><td>0.8037</td><td>25fps</td></tr>
+                  <tr><td>SeqTrack</td><td>ViT</td><td>0.2732</td><td>0.7945</td><td>21fps</td></tr>
+                  <tr><td><strong>ODTrack</strong></td><td>ViT</td><td><strong>0.2893</strong></td><td><strong>0.8102</strong></td><td>23fps</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+        <p class="benchmark-footnote" data-i18n="benchmark_note">注：论文表 2 注明，下划线模型在 4060Ti 上训练，其余模型在 A40 GPU 上训练。</p>
       </div>
     </section>
 
     <section id="download" class="section">
       <div class="container">
         <div class="section-head">
-          <h2 data-i18n="download_title">下载与资源</h2>
-          <p data-i18n="download_desc">把论文、代码、数据、补充材料和许可证入口集中放在这里。</p>
+          <h2 data-i18n="download_title">资源与下载</h2>
+          <p data-i18n="download_desc">这里整理了项目页、论文 PDF、benchmark 说明与引用入口。</p>
         </div>
 
         <div class="resource-grid">
-          <a class="resource-card" href="https://github.com/" target="_blank" rel="noopener noreferrer">
-            <h3 data-i18n="res_code_title">代码仓库</h3>
-            <p data-i18n="res_code_desc">将此链接替换为 GitHub / Gitee / Hugging Face 项目主页。</p>
+          <a class="resource-card" href="https://y-f-wei.github.io/DGV-Suite/" target="_blank" rel="noopener noreferrer">
+            <h3 data-i18n="res_project_title">项目主页</h3>
+            <p data-i18n="res_project_desc">论文摘要中提供的官方项目页链接，可承载数据、补充材料与后续更新。</p>
           </a>
-          <a class="resource-card" href="https://arxiv.org/" target="_blank" rel="noopener noreferrer">
-            <h3 data-i18n="res_paper_title">论文链接</h3>
-            <p data-i18n="res_paper_desc">可填写 arXiv、期刊官网、会议主页或 DOI 链接。</p>
+          <a class="resource-card" href="assets/paper/DGV-Suite.pdf" target="_blank" rel="noopener noreferrer">
+            <h3 data-i18n="res_paper_title">论文 PDF</h3>
+            <p data-i18n="res_paper_desc">本模板已内置你上传的 DGV-Suite 论文 PDF，部署后可直接在线打开。</p>
           </a>
-          <a class="resource-card" href="https://huggingface.co/datasets" target="_blank" rel="noopener noreferrer">
-            <h3 data-i18n="res_dataset_title">数据下载</h3>
-            <p data-i18n="res_dataset_desc">可指向 Hugging Face、学校服务器、网盘或 GitHub Release。</p>
+          <a class="resource-card" href="#benchmark">
+            <h3 data-i18n="res_benchmark_title">Benchmark Protocol</h3>
+            <p data-i18n="res_benchmark_desc">包含六个监督任务的数据划分、评测指标与 Table 2 中的代表性结果。</p>
           </a>
           <a class="resource-card" href="#citation">
             <h3 data-i18n="res_cite_title">BibTeX 引用</h3>
-            <p data-i18n="res_cite_desc">建议提供一键复制引用，方便论文使用者标准化引用。</p>
+            <p data-i18n="res_cite_desc">提供匿名投稿版本的 BibTeX，可在定稿时替换作者和 venue 信息。</p>
           </a>
         </div>
       </div>
@@ -295,23 +408,24 @@
           </div>
           <div class="code-block-wrap">
             <div class="code-title">BibTeX</div>
-<pre><code id="bibtex">@article{yourdataset2026,
-  title   = {GoatMVT: A Multi-Task Vision Dataset for Intelligent Dairy Goat Farming},
-  author  = {Your Name and Coauthors},
-  journal = {Your Target Venue},
-  year    = {2026}
+<pre><code id="bibtex">@inproceedings{anonymous2026dgvsuite,
+  title     = {DGV-Suite: A Benchmark Suite of Task-Specific Subsets for Dairy Goat Vision},
+  author    = {Anonymous Author(s)},
+  booktitle = {Anonymous Submission},
+  note      = {Submission Id: 123-A56-BU3},
+  year      = {2026}
 }</code></pre>
           </div>
           <button id="copyBibtex" class="btn btn-secondary" data-i18n="btn_copy">复制 BibTeX</button>
           <span id="copyStatus" class="copy-status"></span>
         </div>
         <aside class="contact-panel">
-          <h3 data-i18n="contact_title">联系与许可</h3>
-          <p data-i18n="contact_body">建议在这里说明数据使用协议、非商业用途限制、隐私与伦理声明，以及联系邮箱。</p>
+          <h3 data-i18n="contact_title">联系与说明</h3>
+          <p data-i18n="contact_body">当前网页内容严格依据上传论文中的匿名版本信息改写。若你后续用于正式公开发布，建议补充作者、单位、数据访问许可、代码仓库与联系邮箱。</p>
           <ul>
-            <li>Email: yourname@university.edu</li>
-            <li>License: CC BY-NC 4.0 / Custom Academic License</li>
-            <li data-i18n="contact_note">请根据你的实际论文状态、基金信息和机构要求修改本页。</li>
+            <li data-i18n="contact_item_1">Contact: to be updated after review</li>
+            <li data-i18n="contact_item_2">License: benchmark release policy to be updated</li>
+            <li data-i18n="contact_item_3">Supplementary: keypoint and behavior definitions are referenced on the project page</li>
           </ul>
         </aside>
       </div>
@@ -320,8 +434,8 @@
 
   <footer class="site-footer">
     <div class="container footer-wrap">
-      <p>© 2026 GoatMVT Dataset Template</p>
-      <p data-i18n="footer_note">Built for academic datasets, benchmarks, and project pages.</p>
+      <p>© DGV-Suite</p>
+      <p data-i18n="footer_note">Task-structured dairy goat vision benchmark website.</p>
     </div>
   </footer>
 
