@@ -1,25 +1,72 @@
-<svg width="1200" height="760" viewBox="0 0 1200 760" fill="none" xmlns="http://www.w3.org/2000/svg">
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="920" viewBox="0 0 1400 920" fill="none">
   <defs>
-    <linearGradient id="bg" x1="0" y1="0" x2="1200" y2="760" gradientUnits="userSpaceOnUse">
-      <stop stop-color="#EAF0FF"/>
-      <stop offset="1" stop-color="#F6FFFB"/>
+    <linearGradient id="bg" x1="0" y1="0" x2="1400" y2="920" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#EEF4FF"/>
+      <stop offset="1" stop-color="#F6FBF8"/>
     </linearGradient>
-    <linearGradient id="card" x1="188" y1="150" x2="980" y2="624" gradientUnits="userSpaceOnUse">
-      <stop stop-color="#FFFFFF"/>
-      <stop offset="1" stop-color="#F3F7FF"/>
+    <linearGradient id="card" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#1E5BFF"/>
+      <stop offset="1" stop-color="#29B07A"/>
     </linearGradient>
+    <filter id="shadow" x="0" y="0" width="1400" height="920" filterUnits="userSpaceOnUse">
+      <feDropShadow dx="0" dy="18" stdDeviation="28" flood-color="#29486B" flood-opacity="0.12"/>
+    </filter>
   </defs>
-  <rect width="1200" height="760" rx="36" fill="url(#bg)"/>
-  <circle cx="176" cy="118" r="84" fill="#D8E7FF"/>
-  <circle cx="1060" cy="646" r="116" fill="#D7FAE8"/>
-  <rect x="118" y="122" width="964" height="516" rx="28" fill="url(#card)" stroke="#C9D7F3" stroke-width="3"/>
-  <rect x="170" y="186" width="280" height="180" rx="22" fill="#DDE7FF"/>
-  <rect x="486" y="186" width="544" height="38" rx="12" fill="#C7D8FF"/>
-  <rect x="486" y="246" width="472" height="26" rx="10" fill="#DDE7FF"/>
-  <rect x="486" y="292" width="364" height="26" rx="10" fill="#E8F0FF"/>
-  <rect x="170" y="408" width="250" height="166" rx="22" fill="#E8FFF4"/>
-  <rect x="448" y="408" width="250" height="166" rx="22" fill="#EAF0FF"/>
-  <rect x="726" y="408" width="304" height="166" rx="22" fill="#F2F6FF"/>
-  <text x="170" y="84" fill="#2C3A56" font-family="Inter, Arial, sans-serif" font-size="36" font-weight="800">Dataset Website Template</text>
-  <text x="170" y="696" fill="#5A6B8E" font-family="Inter, Arial, sans-serif" font-size="28" font-weight="600">Replace this figure with your teaser image, pipeline, or benchmark overview.</text>
+  <rect width="1400" height="920" rx="44" fill="url(#bg)"/>
+  <circle cx="1150" cy="140" r="170" fill="#DDEBFF"/>
+  <circle cx="1260" cy="260" r="120" fill="#E2F6ED"/>
+  <circle cx="150" cy="760" r="180" fill="#EAF5FF"/>
+  <g filter="url(#shadow)">
+    <rect x="70" y="90" width="1260" height="740" rx="34" fill="white"/>
+  </g>
+  <text x="120" y="180" font-family="Inter, Noto Sans SC, Arial" font-size="28" font-weight="700" fill="#1E5BFF">DGV-Suite</text>
+  <text x="120" y="250" font-family="Inter, Noto Sans SC, Arial" font-size="62" font-weight="800" fill="#132235">A Benchmark Suite of</text>
+  <text x="120" y="320" font-family="Inter, Noto Sans SC, Arial" font-size="62" font-weight="800" fill="#132235">Task-Specific Subsets</text>
+  <text x="120" y="390" font-family="Inter, Noto Sans SC, Arial" font-size="62" font-weight="800" fill="#132235">for Dairy Goat Vision</text>
+  <text x="120" y="450" font-family="Inter, Noto Sans SC, Arial" font-size="28" font-weight="500" fill="#526176">32,007 images · 1,459 videos · 8 tasks · authentic farm environments</text>
+
+  <g>
+    <rect x="120" y="505" width="175" height="44" rx="22" fill="#EAF1FF"/>
+    <text x="145" y="534" font-family="Inter, Noto Sans SC, Arial" font-size="22" font-weight="700" fill="#1D54F0">Detection</text>
+
+    <rect x="312" y="505" width="225" height="44" rx="22" fill="#EDF8F4"/>
+    <text x="338" y="534" font-family="Inter, Noto Sans SC, Arial" font-size="22" font-weight="700" fill="#228F66">Instance Segmentation</text>
+
+    <rect x="553" y="505" width="215" height="44" rx="22" fill="#FFF4E7"/>
+    <text x="578" y="534" font-family="Inter, Noto Sans SC, Arial" font-size="22" font-weight="700" fill="#C57513">Semantic Segmentation</text>
+
+    <rect x="120" y="565" width="150" height="44" rx="22" fill="#F4EEFF"/>
+    <text x="146" y="594" font-family="Inter, Noto Sans SC, Arial" font-size="22" font-weight="700" fill="#6A44C1">Tracking</text>
+
+    <rect x="288" y="565" width="185" height="44" rx="22" fill="#EAF6FF"/>
+    <text x="314" y="594" font-family="Inter, Noto Sans SC, Arial" font-size="22" font-weight="700" fill="#146C98">Pose Estimation</text>
+
+    <rect x="492" y="565" width="215" height="44" rx="22" fill="#FFF1F0"/>
+    <text x="518" y="594" font-family="Inter, Noto Sans SC, Arial" font-size="22" font-weight="700" fill="#B9504A">Behavior Recognition</text>
+
+    <rect x="120" y="625" width="190" height="44" rx="22" fill="#F8F4EA"/>
+    <text x="146" y="654" font-family="Inter, Noto Sans SC, Arial" font-size="22" font-weight="700" fill="#8B6C1C">Identification</text>
+
+    <rect x="328" y="625" width="215" height="44" rx="22" fill="#EEF2F8"/>
+    <text x="354" y="654" font-family="Inter, Noto Sans SC, Arial" font-size="22" font-weight="700" fill="#415161">Image Generation</text>
+  </g>
+
+  <g>
+    <rect x="920" y="165" width="300" height="180" rx="28" fill="url(#card)"/>
+    <text x="955" y="225" font-family="Inter, Noto Sans SC, Arial" font-size="24" font-weight="700" fill="white">Dataset Scale</text>
+    <text x="955" y="285" font-family="Inter, Noto Sans SC, Arial" font-size="58" font-weight="800" fill="white">159</text>
+    <text x="1065" y="286" font-family="Inter, Noto Sans SC, Arial" font-size="24" font-weight="600" fill="#EAF7F1">goat IDs</text>
+    <text x="955" y="330" font-family="Inter, Noto Sans SC, Arial" font-size="22" font-weight="600" fill="#EAF7F1">17 keypoints · 7 behaviors</text>
+  </g>
+
+  <g>
+    <rect x="820" y="405" width="400" height="270" rx="28" fill="#0F1727"/>
+    <text x="860" y="460" font-family="Inter, Noto Sans SC, Arial" font-size="28" font-weight="700" fill="#FFFFFF">Benchmark Protocol</text>
+    <text x="860" y="520" font-family="Inter, Noto Sans SC, Arial" font-size="22" font-weight="500" fill="#C9D4E8">6 supervised tasks</text>
+    <text x="860" y="560" font-family="Inter, Noto Sans SC, Arial" font-size="22" font-weight="500" fill="#C9D4E8">Train / Val / Test = 7 : 1 : 2</text>
+    <text x="860" y="600" font-family="Inter, Noto Sans SC, Arial" font-size="22" font-weight="500" fill="#C9D4E8">AP, mIoU, mDice, mPA, F1, EAO</text>
+    <text x="860" y="645" font-family="Inter, Noto Sans SC, Arial" font-size="22" font-weight="600" fill="#63D3A5">Authentic indoor–outdoor farm scenes</text>
+  </g>
+
+  <text x="120" y="760" font-family="Inter, Noto Sans SC, Arial" font-size="24" font-weight="600" fill="#5A677A">Task-structured benchmark website adapted from the DGV-Suite manuscript</text>
 </svg>
