@@ -1,0 +1,787 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="DGV-Suite: A benchmark suite of task-specific subsets for dairy goat vision." />
+  <title>DGV-Suite | Dairy Goat Vision Benchmark</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+SC:wght@400;500;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a href="#home" class="brand">
+        <span class="brand-badge">DG</span>
+        <span class="brand-text">DGV-Suite</span>
+      </a>
+
+      <nav class="nav" aria-label="Primary">
+        <a href="#overview">Overview</a>
+        <a href="#abstract">Abstract</a>
+        <a href="#dataset">Dataset</a>
+        <a href="#examples">Examples</a>
+        <a href="#benchmark">Benchmark</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section id="home" class="hero section">
+      <div class="container hero-grid">
+        <div class="hero-copy hero-copy-centered">
+          <h1>DGV-Suite: A Benchmark Suite of Task-Specific Subsets for Dairy Goat Vision</h1>
+          <div class="author-grid" aria-label="Authors">
+            <p class="author-name"><strong>
+              <a class="author-link" href="mailto:weiyifan@nwafu.edu.cn" aria-label="Email Yifan Wei" title="weiyifan@nwafu.edu.cn">Yifan Wei</a><sup>1</sup>, 
+              <a class="author-link" href="mailto:tangjinglei@nwsuaf.edu.cn" aria-label="Email Jinglei Tang" title="tangjinglei@nwsuaf.edu.cn">Jinglei Tang</a><sup>*1</sup>, 
+              <a class="author-link" href="mailto:hangaoge@gmail.com" aria-label="Email Gaoge Han" title="hangaoge@gmail.com">Gaoge Han</a><sup>2</sup>, 
+              <a class="author-link" href="mailto:ronghao@nwafu.edu.cn" aria-label="Email Hao Rong" title="ronghao@nwafu.edu.cn">Hao Rong</a><sup>1</sup>, 
+              <a class="author-link" href="mailto:peixianglong@nwafu.edu.cn" aria-label="Email Xianglong Pei" title="peixianglong@nwafu.edu.cn">Xianglong Pei</a><sup>1</sup>, 
+              <a class="author-link" href="mailto:25B951126@stu.hit.edu.cn" aria-label="Email Ruizi Han" title="25B951126@stu.hit.edu.cn">Ruizi Han</a><sup>3</sup>
+            </strong></p>
+          </div>
+
+          <div class="hero-affiliations" aria-label="Affiliations">
+            <p class="affiliation-slot"><sup>1</sup>Northwest A&amp;F University, Yang ling, Shaanxi, China</p>
+            <p class="affiliation-slot"><sup>2</sup>Mohamed bin Zayed University of Artificial Intelligence, Abu Dhabi, UAE</p>
+            <p class="affiliation-slot"><sup>3</sup>Harbin Institute of Technology, Shen Zhen, Guangdong, China</p>
+          </div>
+
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="https://pan.baidu.com/s/1rRBElmpcb7O6RaG5X8GNrw?pwd=3vgb#list/path=%2F" target="_blank" rel="noopener noreferrer">Download</a>
+            <a class="btn btn-secondary" href="#benchmark">View Benchmark</a>
+            <a class="btn btn-ghost" href="assets/paper/DGV.pdf" target="_blank" rel="noopener noreferrer">Paper PDF</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="overview" class="section muted-bg">
+      <div class="container">
+        <div class="section-head">
+          <h2>Dataset Overview</h2>
+          <p>DGV-Suite is organized as task-specific subsets under a unified benchmark framework for dairy goat visual understanding.</p>
+        </div>
+        <div class="stats-grid">
+          <article class="stat-card">
+            <span class="stat-value">32,007</span>
+            <span class="stat-label">Images</span>
+          </article>
+          <article class="stat-card">
+            <span class="stat-value">1,459</span>
+            <span class="stat-label">Videos</span>
+          </article>
+          <article class="stat-card">
+            <span class="stat-value">8</span>
+            <span class="stat-label">Task Subsets</span>
+          </article>
+          <article class="stat-card">
+            <span class="stat-value">159</span>
+            <span class="stat-label">Goat IDs</span>
+          </article>
+          <article class="stat-card">
+            <span class="stat-value">17</span>
+            <span class="stat-label">Anatomical Keypoints</span>
+          </article>
+          <article class="stat-card">
+            <span class="stat-value">7</span>
+            <span class="stat-label">Behavior Classes</span>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="abstract" class="section">
+      <div class="container two-col">
+        <div>
+          <div class="section-head left-align">
+            <h2>Abstract</h2>
+          </div>
+          <p class="lead">
+            Dairy goats have attracted increasing attention recently due to their nutritional and economic importance, as well as 
+            their growing role in global livestock production. Meanwhile, computer vision and intelligent multimedia analysis have 
+            shown strong potential for improving dairy goat management by enabling automated monitoring, behavior understanding, 
+            and fine-grained decision support in practical farming environments. However, existing dairy goat datasets are typically 
+            small in scale, task-isolated, and collected under constrained conditions, making them insufficient for intelligent 
+            multimedia analysis in realistic farming environments. To address this gap, we present DGV-Suite, a large-scale 
+            benchmark suite for dairy goat vision, organized as multiple task-specific subsets under a standardized benchmark 
+            framework, containing 32,007 images and 1,459 videos collected from authentic farm environments, covering diverse 
+            conditions of illumination, occlusion, and inter-animal interaction. The benchmark supports eight representative 
+            tasks, including object detection, instance segmentation, semantic segmentation, object tracking, pose estimation, 
+            behavior recognition, individual identification, and image generation; it provides task-specific subsets for 
+            diverse dairy goat visual understanding scenarios. We further establish benchmark settings and report baseline results 
+            on six supervised tasks using representative models, confirming the practical application challenges and benchmark value 
+            of DGV-Suite, which provides a valuable resource for advancing future research in precision livestock farming, dairy goat 
+            scene understanding, and intelligent multimedia analysis.
+          </p>
+        </div>
+        <aside class="feature-panel">
+          <h3>Highlights</h3>
+          <ul class="feature-list">
+            <li>We present DGV-Suite, a large-scale benchmark suite of task-specific subsets for dairy goat vision in realistic farming environments.</li>
+
+            <li>DGV-Suite contains 32,007 images and 1,459 videos, covering eight representative tasks with standardized task-specific annotations.</li>
+
+            <li>The dataset captures substantial real-world challenges, including occlusion, dense animal layouts, strong inter-individual similarity, and complex indoor–outdoor backgrounds.</li>
+
+            <li>We establish benchmark protocols and report baseline results on six supervised tasks using representative state-of-the-art models.</li>
+
+            <li>DGV-Suite provides a practical benchmark resource for dairy goat visual understanding, precision livestock farming, and intelligent multimedia analysis.</li>
+          </ul>
+        </aside>
+      </div>
+    </section>
+
+    <section id="dataset" class="section muted-bg">
+      <div class="container">
+        <div class="section-head">
+          <h2>Dataset &amp; Annotation</h2>
+        </div>
+
+        <div class="dataset-subsections">
+          <article class="dataset-subsection">
+            <h3>Farm Environment</h3>
+            <p>
+              The data were collected at a large-scale dairy goat research and teaching farm in northwestern China, featuring semi-open indoor barns and outdoor exercise areas.
+              This indoor-outdoor integrated semi-open housing structure represents a typical model for large-scale dairy goat breeding in the temperate regions of northwest China, 
+              featuring strong regional representativeness. 
+            </p>
+            <div class="dataset-photo-grid">
+              <figure class="dataset-photo-card">
+                <img src="assets/img/indoor.jpg" alt="Indoor farm environment" />
+                <figcaption>Indoor farm environment</figcaption>
+              </figure>
+              <figure class="dataset-photo-card">
+                <img src="assets/img/outdoor.jpg" alt="Outdoor farm environment" />
+                <figcaption>Outdoor farm environment</figcaption>
+              </figure>
+            </div>
+            <div class="dataset-text-grid">
+              <details class="dataset-text-card">
+                <summary>Indoor farm environment</summary>
+                <p>
+                  The indoor barn is a regular rectangular structure, measuring approximately 50 meters in length, 10 meters in width and 5 meters in height, 
+                  providing a spacious and well-ventilated space suitable for daily management of large-scale breeding. A central passage runs through the 
+                  middle of the barn, dividing the interior space into two symmetrical sections, with multiple independent pens separated by iron fences on 
+                  both sides. Each pen is equipped with a dedicated small gate that connects directly to the outdoor activity area, allowing goats to move 
+                  freely between indoor and outdoor spaces and choose resting or active areas independently. Above each gate, three natural lighting windows 
+                  are installed to fully introduce natural light, regulate indoor light intensity, avoid damp and dark conditions in the barn, and conform 
+                  to the growth habits of dairy goats.
+                </p>
+              </details>
+              <details class="dataset-text-card">
+                <summary>Outdoor farm environment</summary>
+                <p>
+                  The supporting outdoor activity enclosure covers an area of roughly 25 meters in length and 5 meters in width, with a stable and safe 
+                  enclosed structure. One side of the enclosure is bounded by the outer wall of the indoor barn (approximately 5 meters high), while the 
+                  other three sides are enclosed by iron fences standing about 1.6 meters high. This structure not only guarantees the safety of goats 
+                  during activities and prevents escape, but also ensures adequate air circulation and open vision. Special feeding troughs are placed 
+                  regularly within the enclosure to provide convenient foraging access for goats, forming an integrated breeding layout of indoor resting, 
+                  outdoor activities and fixed-point foraging, which fully meets the core needs of daily growth and exercise for dairy goats.
+                </p>
+              </details>
+            </div>
+          </article>
+
+          <article class="dataset-subsection">
+            <h3>Acquisition Devices</h3>
+            <p>
+              Data acquisition was implemented using a multi-camera configuration deployed in the indoor livestock barn and the outdoor exercise yard. 
+              During the daily recording period from 09:00 to 18:30, the goat herd roamed freely within the indoor and outdoor pens, generating natural 
+              and diverse visual scenes.
+
+              <li>YW7100HR-SC9 high-definition infrared network cameras, installed at elevated positions indoors and under the outdoor eaves, continuously 
+                recorded videos to provide a stable overhead perspective for long-term monitoring.</li>
+
+              <li>Multiple DS-IPC-B12-I/POE cameras were mounted on surrounding supporting walls at a height of approximately 3 m and tilted downward at 
+                an angle of about 60°, ensuring full coverage of the pen areas. All cameras recorded at 1080p resolution and 25 frames per second (fps), 
+                and were connected via wired links to a central workstation for synchronized data acquisition.</li>
+
+              <li>High-resolution static images were captured using a Canon EOS 60D digital camera, with each image centered on a single goat. Images 
+                suffering from blurriness, low contrast, or severe environmental occlusion were filtered out through manual inspection.</li>
+
+            </p>
+          </article>
+
+          <article class="dataset-subsection">
+            <h3>Annotation Protocols</h3>
+            <p>
+              All task-specific annotations follow a unified file naming convention and hierarchical directory structure. The entire annotation team 
+              was composed of professional researchers with expertise in livestock breeding and computer vision. Multi-level quality control procedures 
+              were implemented to guarantee data reliability: cross-validation between multiple annotators to resolve labeling discrepancies, automated 
+              format checking to eliminate file errors, and random manual sampling review of labeled samples. 
+            </p>
+            <div class="dataset-text-grid">
+              <details class="dataset-text-card">
+                <summary>Pose Estimation</summary>
+                <p>
+                  Each extracted frame was annotated with 17 biologically meaningful anatomical keypoints following the standard COCO format, covering 
+                  the head, trunk, forelimbs, and hind limbs. Particular attention was paid to the consistency of left/right assignment, joint localization, 
+                  paw positioning, and annotation behavior under partial occlusion or truncation.
+                </p>
+                <div class="anno-rules">
+                  <h4>Annotation Rules</h4>
+                  <ol>
+                    <li>Left and right are defined from the goat's own perspective rather than from the image viewer's perspective.</li>
+                    <li>Each keypoint should be placed at the anatomically consistent landmark center whenever possible.</li>
+                    <li>For joint-type landmarks, the point should correspond to the estimated joint pivot rather than the visible contour extreme.</li>
+                    <li>For paw landmarks, the point should be placed at the distal hoof center or the main ground-contact position.</li>
+                  </ol>
+                </div>
+                <div class="anno-table-wrap">
+                  <table class="anno-table pose-anno-table">
+                    <caption>Keypoint annotation definitions for pose estimation</caption>
+                    <thead>
+                      <tr>
+                        <th>Part</th>
+                        <th>Keypoint</th>
+                        <th>Operational definition</th>
+                        <th>Skeleton Topology</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td rowspan="5">Trunk</td>
+                        <td>1 Left eye</td>
+                        <td>Center of the visible eye region, approximating the anatomical eye center.</td>
+                        <td>1 - 2; 1 - 3</td>
+                      </tr>
+                      <tr>
+                        <td>2 Right eye</td>
+                        <td>Center of the visible eye region, approximating the anatomical eye center.</td>
+                        <td>2 - 3</td>
+                      </tr>
+                      <tr>
+                        <td>3 Nose</td>
+                        <td>Center of the snout tip at the most stable frontal nose landmark.</td>
+                        <td>3 - 4</td>
+                      </tr>
+                      <tr>
+                        <td>4 Neck</td>
+                        <td>Junction region between the head and trunk, centered at the anatomically stable neck pivot.</td>
+                        <td>4 - 6; 4 - 9; 4 - 5</td>
+                      </tr>
+                      <tr>
+                        <td>5 Root of tail</td>
+                        <td>Dorsal junction between the tail and the trunk.</td>
+                        <td>5 - 12; 5 - 15</td>
+                      </tr>
+                      <tr>
+                        <td rowspan="3">Left fore limb</td>
+                        <td>6 Left shoulder</td>
+                        <td>Approximate center of the shoulder joint connecting the trunk and the forelimb.</td>
+                        <td>6 - 7</td>
+                      </tr>
+                      <tr>
+                        <td>7 Left elbow</td>
+                        <td>Approximate center of the elbow joint on the forelimb.</td>
+                        <td>7 - 8</td>
+                      </tr>
+                      <tr>
+                        <td>8 Left front paw</td>
+                        <td>Distal center of the front hoof or the main ground-contact point.</td>
+                        <td>8 - 7</td>
+                      </tr>
+                      <tr>
+                        <td rowspan="3">Right fore limb</td>
+                        <td>9 Right shoulder</td>
+                        <td>Approximate center of the shoulder joint connecting the trunk and the forelimb.</td>
+                        <td>9 - 10</td>
+                      </tr>
+                      <tr>
+                        <td>10 Right elbow</td>
+                        <td>Approximate center of the elbow joint on the forelimb.</td>
+                        <td>10 - 11</td>
+                      </tr>
+                      <tr>
+                        <td>11 Right front paw</td>
+                        <td>Distal center of the front hoof or the main ground-contact point.</td>
+                        <td>11 - 10</td>
+                      </tr>
+                      <tr>
+                        <td rowspan="3">Left hind limb</td>
+                        <td>12 Left hip</td>
+                        <td>Approximate center of the hip joint connecting the trunk and the hind limb.</td>
+                        <td>12 - 13</td>
+                      </tr>
+                      <tr>
+                        <td>13 Left knee</td>
+                        <td>Approximate center of the hind-limb knee joint.</td>
+                        <td>13 - 14</td>
+                      </tr>
+                      <tr>
+                        <td>14 Left back paw</td>
+                        <td>Distal center of the hind hoof or the main ground-contact point.</td>
+                        <td>14 - 13</td>
+                      </tr>
+                      <tr>
+                        <td rowspan="3">Right hind limb</td>
+                        <td>15 Right hip</td>
+                        <td>Approximate center of the hip joint connecting the trunk and the hind limb.</td>
+                        <td>15 - 16</td>
+                      </tr>
+                      <tr>
+                        <td>16 Right knee</td>
+                        <td>Approximate center of the hind-limb knee joint.</td>
+                        <td>16 - 17</td>
+                      </tr>
+                      <tr>
+                        <td>17 Right back paw</td>
+                        <td>Distal center of the hind hoof or the main ground-contact point.</td>
+                        <td>17 - 16</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </details>
+              <details class="dataset-text-card">
+                <summary>Behavior Recognition</summary>
+                <p>
+                  Strict quality control was implemented throughout the behavior-related annotation process, with emphasis on diversity of postures and 
+                  challenging real-world scenarios such as body occlusion, posture deformation and multi-angle viewpoint variations. Behavior categories 
+                  were defined based on three core principles: universality, authenticity and evaluability. The current taxonomy covers both common daily 
+                  behaviors and rare but practically important abnormal states.
+                </p>
+                <div class="anno-rules">
+                  <h4>Annotation Rules</h4>
+                  <ol>
+                    <li>The start time is the first frame in which the target behavior is clearly established, and the end time is the last frame before the 
+                      subject changes to a different behavior or the action's semantic completeness is lost.</li>
+                    <li>The annotated behavior should be visually recognizable, semantically stable, and temporally sustained within the clip.</li>
+                    <li>When a clip contains multiple behaviors, the label is determined by the behavior occupying the main effective duration of the segment.</li>
+                    <li>Short transitions, ambiguous postural adjustments, or incomplete actions are not used as standalone labels.</li>
+                  </ol>
+                </div>
+                <div class="anno-table-wrap">
+                  <table class="anno-table behavior-anno-table">
+                    <caption>Behavior definitions of dairy goat</caption>
+                    <thead>
+                      <tr>
+                        <th>Behaviors</th>
+                        <th>Behavior description</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>Standing</td>
+                        <td>Stable quadrupedal stance with limbs erect, torso upright or slightly forward-leaning, head stationary or moving naturally, 
+                          no overall body displacement, and the main torso not contacting the ground.</td>
+                      </tr>
+                      <tr>
+                        <td>Walking</td>
+                        <td>Alternating limb movement for displacement, back level, and no significant body lift.</td>
+                      </tr>
+                      <tr>
+                        <td>Lying down</td>
+                        <td>The main body fully contacting the ground, with no tendency for autonomous standing or displacement.</td>
+                      </tr>
+                      <tr>
+                        <td>Climbing</td>
+                        <td>Forelimbs supporting a higher object, hind limbs touching ground or lower object, torso non-parallel to ground.</td>
+                      </tr>
+                      <tr>
+                        <td>Fighting</td>
+                        <td>At least two goats in physical contact, butting heads mutually.</td>
+                      </tr>
+                      <tr>
+                        <td>Paralyzing</td>
+                        <td>Unable to stand independently, limbs cannot be actively flexed, extended, or used to support the body, and the head is movable.
+                          Paralyzing is not lameness but a rare condition like twitching.
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>Eating</td>
+                        <td>Head actively approaches the feeding area and maintains contact.</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </details>
+              <details class="dataset-text-card">
+                <summary>Detection and Tracking</summary>
+                <p>
+                  Detection boxes are defined to cover the visible extent of the target as consistently as possible while preserving semantic completeness. 
+                  In crowded scenes, adjacent goats are annotated as separate instances whenever their visible regions can be reliably distinguished. 
+                  For tracking, the same target is assigned a temporally consistent trajectory across consecutive frames. Head or body targets are selected 
+                  according to visibility, interaction pattern, and tracking suitability, with the goal of preserving stable target identity throughout the 
+                  sequence.
+                </p>
+                <div class="anno-rules">
+                  <h4>Ambiguity Handling</h4>
+                  <ol>
+                    <li>In detection, heavily truncated, extremely blurred, or visually indiscernible targets are excluded from annotation when reliable 
+                      localization is not possible. </li>
+                    <li>In tracking, temporary occlusion is tolerated as long as the target identity can still be reasonably maintained across frames. 
+                      When identity continuity cannot be reliably preserved because of severe overlap, abrupt disappearance, or prolonged occlusion, the 
+                      corresponding segment is treated conservatively to reduce annotation noise.</li>
+                  </ol>
+                </div>
+                <div class="anno-rules">
+                  <h4>Format Information</h4>
+                  <ol>
+                    <li>Detection format: PASCAL VOC</li>
+                    <li>Tracking format: VOT sequence annotation</li>
+                    <li>Detection target: Dairy goat instance</li>
+                    <li>Tracking target: Head or body target, depending on visibility and interaction pattern</li>
+                  </ol>
+                </div>
+              </details>
+              <details class="dataset-text-card">
+                <summary>Segmentation Tasks</summary>
+                <p>
+                  For instance segmentation, each goat is annotated as an independent instance whenever it can be reliably distinguished from neighboring 
+                  animals. Polygon masks follow visible contours while preserving semantic completeness, and severely truncated, blurred, or indiscernible 
+                  regions are excluded. Overlapping instances are separated conservatively based on visible evidence.
+                </p>
+                <p>
+                  For semantic segmentation, pixels are assigned to predefined semantic regions rather than individual identities. The annotation process 
+                  emphasizes category consistency, region continuity, and interpretability in complex farm scenes. Ambiguous boundaries are resolved by 
+                  dominant semantic class and consistency rules, while unreliable regions are treated conservatively.
+                </p>
+                <div class="anno-rules">
+                  <h4>Format Information</h4>
+                  <ol>
+                    <li>Instance segmentation format: COCO polygon / mask annotations</li>
+                    <li>Semantic segmentation format: Pixel-level semantic region labels</li>
+                    <li>Instance segmentation target: Individual dairy goat instances</li>
+                    <li>Semantic segmentation target: Predefined semantic regions in farm scenes</li>
+                  </ol>
+                </div>
+              </details>
+              <details class="dataset-text-card">
+                <summary>Identification and Generation</summary>
+                <p>
+                  For identification, the subset is organized to maximize intra-identity diversity while preserving strong inter-identity similarity. 
+                  Images from the same goat may differ substantially in pose and viewpoint, whereas images from different goats may still appear visually 
+                  similar.
+                </p>
+                <p>
+                  For generation, the subset is curated to retain visually usable and semantically meaningful samples. Attribute-based organization 
+                  by scene type, coat color, and posture provides controllable factors for generative modeling without requiring explicit geometric 
+                  annotation.
+                </p>
+                <div class="anno-rules">
+                  <h4>Data Curation Rules</h4>
+                  <ol>
+                    <li>In the identification subset, visually invalid samples caused by severe occlusion, extreme blur, or unreliable identity 
+                      assignment are excluded to preserve label reliability. </li>
+                    <li>In the generation subset, samples with severe blur, low contrast, or strong visual obstruction are removed during manual curation 
+                      to improve visual quality and downstream usability. Attribute assignment is performed conservatively to reduce ambiguity and maintain 
+                      subset consistency.</li>
+                  </ol>
+                </div>
+              </details>
+            </div>
+          </article>
+        </div>
+
+        <div class="code-block-wrap">
+          <div class="code-title">DGV-Suite Subset Structure</div>
+<pre><code>DGV-Suite/
+- detection/                 # 3,430 images, 8,216 instances
+- instance_segmentation/     # 3,100 images, 5,572 instances
+- semantic_segmentation/     # 1,829 images, pixel-level masks
+- tracking/                  # 65 head videos + 135 body videos
+- pose_estimation/           # 5,268 images, 17 keypoints
+- behavior_recognition/      # 1,259 videos, 7 classes
+- identification/            # 15,380 images, 159 goats
+- image_generation/          # 3,000 images</code></pre>
+        </div>
+      </div>
+    </section>
+
+    <section id="examples" class="section muted-bg">
+      <div class="container">
+        <div class="section-head">
+          <h2>Examples</h2>
+        </div>
+        <div class="examples-media-grid">
+          <figure class="example-media-item example-wide">
+            <img class="example-image" src="assets/img/seg1.png" alt="Semantic segmentation example" />
+            <figcaption>Semantic Segmentation</figcaption>
+          </figure>
+          <figure class="example-media-item example-wide">
+            <div class="pose-strip-grid" aria-label="Pose estimation examples">
+              <img class="example-image" src="assets/img/pose1.png" alt="Pose estimation example 1" />
+              <img class="example-image" src="assets/img/pose2.png" alt="Pose estimation example 2" />
+              <img class="example-image" src="assets/img/pose3.png" alt="Pose estimation example 3" />
+              <img class="example-image" src="assets/img/pose4.png" alt="Pose estimation example 4" />
+            </div>
+            <figcaption>Pose Estimation</figcaption>
+          </figure>
+          <figure class="example-media-item example-wide">
+            <div class="obj-strip-grid" aria-label="Example segmentation examples">
+              <img class="example-image" src="assets/img/obj1.png" alt="Example segmentation 1" />
+              <img class="example-image" src="assets/img/obj2.png" alt="Example segmentation 2" />
+              <img class="example-image" src="assets/img/obj3.png" alt="Example segmentation 3" />
+              <img class="example-image" src="assets/img/obj4.png" alt="Example segmentation 4" />
+            </div>
+            <figcaption>Instance Segmentation</figcaption>
+          </figure>
+          <figure class="example-media-item example-wide">
+            <div class="ins-strip-grid" aria-label="Object detection examples">
+              <img class="example-image" src="assets/img/ins1.png" alt="Object detection example 1" />
+              <img class="example-image" src="assets/img/ins2.png" alt="Object detection example 2" />
+              <img class="example-image" src="assets/img/ins3.png" alt="Object detection example 3" />
+              <img class="example-image" src="assets/img/ins4.png" alt="Object detection example 4" />
+            </div>
+            <figcaption>Object Detection</figcaption>
+          </figure>
+          <figure class="example-media-item example-wide">
+            <img class="example-image" src="assets/img/track1.png" alt="Tracking example" />
+            <figcaption>Object Tracking</figcaption>
+          </figure>
+          <figure class="example-media-item">
+            <img class="example-image" src="assets/img/id1.png" alt="Identification example" />
+            <figcaption>Identification</figcaption>
+          </figure>
+          <figure class="example-media-item">
+            <img class="example-image" src="assets/img/gen1.png" alt="Image generation example" />
+            <figcaption>Image Generation</figcaption>
+          </figure>
+          <figure class="example-media-item">
+            <video class="example-video" controls playsinline preload="metadata">
+              <source src="assets/img/stand_0.MP4" type="video/mp4" />
+            </video>
+            <figcaption>Standing</figcaption>
+          </figure>
+          <figure class="example-media-item">
+            <video class="example-video" controls playsinline preload="metadata">
+              <source src="assets/img/walk_0.MP4" type="video/mp4" />
+            </video>
+            <figcaption>Walking</figcaption>
+          </figure>
+          <figure class="example-media-item">
+            <video class="example-video" controls playsinline preload="metadata">
+              <source src="assets/img/laydown_0.MP4" type="video/mp4" />
+            </video>
+            <figcaption>Lying down</figcaption>
+          </figure>
+          <figure class="example-media-item">
+            <video class="example-video" controls playsinline preload="metadata">
+              <source src="assets/img/climb_0.MP4" type="video/mp4" />
+            </video>
+            <figcaption>Climbing</figcaption>
+          </figure>
+          <figure class="example-media-item">
+            <video class="example-video" controls playsinline preload="metadata">
+              <source src="assets/img/fight_0.MP4" type="video/mp4" />
+            </video>
+            <figcaption>Fighting</figcaption>
+          </figure>
+          <figure class="example-media-item">
+            <video class="example-video" controls playsinline preload="metadata">
+              <source src="assets/img/paralytic_0.MP4" type="video/mp4" />
+            </video>
+            <figcaption>Paralyzing</figcaption>
+          </figure>
+          <figure class="example-media-item">
+            <video class="example-video" controls playsinline preload="metadata">
+              <source src="assets/img/eat_0.MP4" type="video/mp4" />
+            </video>
+            <figcaption>Eating</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section id="benchmark" class="section muted-bg">
+      <div class="container">
+        <div class="section-head">
+          <h2>Benchmark Results</h2>
+        </div>
+
+        <div class="info-grid benchmark-notes">
+          <article class="info-card">
+            <h3>Benchmark Protocol</h3>
+            <p>
+              All six supervised tasks adopt a unified 7:1:2 train/val/test split.
+              Model checkpoints are selected according to validation performance, 
+              early stopping is applied when the validation metric no longer improves, and all final results are reported on the test set.
+            </p>
+          </article>
+          <article class="info-card">
+            <h3>Evaluation Metrics</h3>
+            <p>
+              Detection, instance segmentation, and pose estimation are evaluated by AP/AP50/AP75.
+              Semantic segmentation uses mIoU/mDice/mPA, behavior recognition uses mAP/mAcc/F1,
+              and tracking uses EAO/Success/Speed.
+            </p>
+          </article>
+          <article class="info-card">
+            <h3>Observations</h3>
+            <p>
+              YOLOv11 leads object detection, YOLOv12-Seg leads instance segmentation, DeepLabV3+ performs best in semantic segmentation,
+              ELSlowFast-LSTM achieves the highest mAP for behavior recognition, and ODTrack obtains the highest EAO for tracking.
+            </p>
+          </article>
+        </div>
+
+        <div class="benchmark-stack">
+          <div class="benchmark-section">
+            <h3>Object Detection</h3>
+            <div class="table-wrap">
+              <table>
+                <thead>
+                  <tr>
+                    <th>Method</th>
+                    <th>Backbone</th>
+                    <th>AP</th>
+                    <th>AP50</th>
+                    <th>AP75</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr><td>Faster R-CNN</td><td>r50</td><td>0.5555</td><td>0.9845</td><td>0.6819</td></tr>
+                  <tr><td>Cascade R-CNN</td><td>r50</td><td>0.5930</td><td>0.9765</td><td>0.6689</td></tr>
+                  <tr><td>FCOS</td><td>r50</td><td>0.5160</td><td>0.9430</td><td>0.5090</td></tr>
+                  <tr><td>YOLOv7</td><td>E-ELAN</td><td>0.5994</td><td><strong>0.9878</strong></td><td>0.7936</td></tr>
+                  <tr><td>YOLOv11</td><td>C2PSA</td><td><strong>0.6346</strong></td><td>0.9826</td><td><strong>0.8023</strong></td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <div class="benchmark-section">
+            <h3>Instance Segmentation</h3>
+            <div class="table-wrap">
+              <table>
+                <thead>
+                  <tr>
+                    <th>Method</th>
+                    <th>Backbone</th>
+                    <th>AP</th>
+                    <th>AP50</th>
+                    <th>AP75</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr><td>Mask R-CNN</td><td>r50</td><td>0.7913</td><td>0.9775</td><td>0.9525</td></tr>
+                  <tr><td>YOLACT</td><td>r50</td><td>0.8107</td><td>0.9688</td><td>0.9288</td></tr>
+                  <tr><td>SOLOv2</td><td>r50</td><td>0.8707</td><td>0.9899</td><td>0.9792</td></tr>
+                  <tr><td>YOLOv8-Seg</td><td>CSPDarknet</td><td>0.6112</td><td>0.7991</td><td>0.6708</td></tr>
+                  <tr><td>YOLOv12-Seg</td><td>R-ELAN</td><td><strong>0.8930</strong></td><td><strong>0.9940</strong></td><td><strong>0.9884</strong></td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <div class="benchmark-section">
+            <h3>Pose Estimation</h3>
+            <div class="table-wrap">
+              <table>
+                <thead>
+                  <tr>
+                    <th>Method</th>
+                    <th>Backbone</th>
+                    <th>AP</th>
+                    <th>AP50</th>
+                    <th>AP75</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr><td>HRNet</td><td>w32</td><td>0.9139</td><td><strong>0.9766</strong></td><td>0.9454</td></tr>
+                  <tr><td>PVT v2</td><td>b2</td><td>0.9055</td><td>0.9750</td><td>0.9521</td></tr>
+                  <tr><td>RTMPose</td><td>CSPNeXt</td><td><strong>0.9145</strong></td><td>0.9764</td><td>0.9448</td></tr>
+                  <tr><td>GRMPose</td><td>CSPNeXt</td><td>0.9117</td><td>0.9765</td><td><strong>0.9550</strong></td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <div class="benchmark-section">
+            <h3>Semantic Segmentation</h3>
+            <div class="table-wrap">
+              <table>
+                <thead>
+                  <tr>
+                    <th>Method</th>
+                    <th>Backbone</th>
+                    <th>mIoU</th>
+                    <th>mDice</th>
+                    <th>mPA</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr><td>U-Net</td><td>r50</td><td>0.7462</td><td>0.7983</td><td>0.7262</td></tr>
+                  <tr><td>DeepLabV3+</td><td>r50</td><td><strong>0.7750</strong></td><td><strong>0.8692</strong></td><td><strong>0.8618</strong></td></tr>
+                  <tr><td>SegFormer</td><td>MiT</td><td>0.7698</td><td>0.8638</td><td>0.8597</td></tr>
+                  <tr><td>SegMAN</td><td>SegMAN Encoder</td><td>0.7670</td><td>0.8616</td><td>0.8578</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <div class="benchmark-section">
+            <h3>Behavior Recognition</h3>
+            <div class="table-wrap">
+              <table>
+                <thead>
+                  <tr>
+                    <th>Method</th>
+                    <th>Backbone</th>
+                    <th>mAP</th>
+                    <th>mAcc</th>
+                    <th>F1</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr><td>I3D</td><td>r50</td><td>0.7690</td><td>0.7019</td><td>0.6890</td></tr>
+                  <tr><td>SlowFast</td><td>r50</td><td>0.7103</td><td>0.6935</td><td>0.6829</td></tr>
+                  <tr><td>TimeSformer</td><td>ViT</td><td>0.7710</td><td>0.7026</td><td>0.6890</td></tr>
+                  <tr><td>VideoMAE v2</td><td>ViT</td><td>0.8091</td><td><strong>0.7294</strong></td><td><strong>0.7256</strong></td></tr>
+                  <tr><td>ELSlowFast-LSTM</td><td>r50</td><td><strong>0.8195</strong></td><td>0.7195</td><td>0.7012</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <div class="benchmark-section">
+            <h3>Object Tracking</h3>
+            <div class="table-wrap">
+              <table>
+                <thead>
+                  <tr>
+                    <th>Method</th>
+                    <th>Backbone</th>
+                    <th>EAO</th>
+                    <th>Success</th>
+                    <th>Speed</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr><td>SiamRPN++</td><td>r50</td><td>0.2489</td><td>0.6401</td><td>33fps</td></tr>
+                  <tr><td>STARK</td><td>r50</td><td>0.2681</td><td>0.8037</td><td>25fps</td></tr>
+                  <tr><td>SeqTrack</td><td>ViT</td><td>0.2732</td><td>0.7945</td><td>21fps</td></tr>
+                  <tr><td>ODTrack</td><td>ViT</td><td><strong>0.2893</strong></td><td><strong>0.8102</strong></td><td>23fps</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <section class="ethics-section" aria-label="Ethics Statement and Animal Welfare">
+    <div class="container">
+      <h2>Ethics Statement and Animal Welfare.</h2>
+      <p>
+        Data acquisition was performed in real farm environments using non-invasive visual recording methods, with no physical 
+        intervention, restraint, or harmful treatment imposed on the animals. Throughout the collection process, animal welfare 
+        was prioritized by minimizing disturbance to their normal feeding, resting, and locomotion behaviors. The authors fully 
+        own the dataset; it will be provided upon reasonable request.
+      </p>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container footer-wrap">
+      <p>&copy; DGV-Suite</p>
+    </div>
+  </footer>
+</body>
+</html>
